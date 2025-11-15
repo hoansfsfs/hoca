@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+div.container {
+    width: 100%;
+    border: 1px solid rgb(255, 255, 253);
+}
+header, footer {
+    padding: 20px;
+    color: white;
+    background-color: #686868;
+    clear: left;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+    
+nav ul a {
+    text-decoration: none;
+}
+a {
+    margin-right: 20px; /* tạo khoảng cách bên phải */
+    text-decoration: none;
+    color: #000;
+  }
+  .color-blink {
+      font-size: 40px;
+      font-weight: bold;
+      animation: blinkColor 1s infinite;
+    }
+
+    @keyframes blinkColor {
+      0%   { color: red;     opacity: 1; }
+      25%  { color: blue;    opacity: 0; }
+      50%  { color: green;   opacity: 1; }
+      75%  { color: orange;  opacity: 0; }
+      100% { color: purple;  opacity: 1; }
+    }
+    a {
+      color: rgb(164, 102, 252); /* Màu mặc định */
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(251, 125, 163); /* Màu khi di chuột vào */
+    }
+    .toc-container {
+      border: 1px solid #ccc;
+      padding: 16px;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+      max-width: 600px;
+      font-family: sans-serif;
+      position: relative;
+    }
+
+    .toc-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style-type: decimal;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .toc-list li {
+      margin-bottom: 8px;
+    }
+
+    .toc-list a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.2s ease;
+    }
+
+    .toc-list a:hover {
+      color: #007BFF; /* Màu xanh khi hover */
+    }
+       body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+      padding: 15px;
+      background-color: #686868;
+      display: inline-block;
+      position:fixed;
+      top: 45px;
+    right: 15px; /* Move icon to the right side */
+    z-index: 1001;
+  }
+
+    .nav-drawer {
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: -250px; /* Hidden initially */
+      background-color: #333;
+      color: white;
+      overflow-y: auto;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .nav-drawer ul {
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .nav-d li {
+      padding: 10px 0;
+      border-bottom: 1px solid #555;
+    }
+
+    .nav-drawer ul li:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      z-index: 999;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body>
+<header>
+    <div style="position: relative; height: 10px;">
+  <img src="gorillaz.png" alt="Logo" style="position: absolute; top: 20px; left: 0px;" width="80">
+</div>
+<div class="menu-icon" onclick="toggleDrawer()">☰ Menu</div>
+
+  <div class="overlay" onclick="toggleDrawer()" id="overlay"></div>
+
+  <div class="nav-drawer" id="drawer">
+    <ul>
+      <h1> <b style="font-size: 30px;"> Menu để làm kiểu  </b></h1>
+      <li> <a href="https://www.facebook.com/if.aborohn"></li>
+      <li>Test</li>
+      <li>Test</li>
+      <li>Test</li>
+      <li>Test</li>
+      <li>Test</li>
+      <li>Test</li>
+    </ul>
+  </div>
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      if (drawer.style.left === '0px') {
+        drawer.style.left = '-250px';
+        overlay.style.display = 'none';
+      } else {
+        drawer.style.left = '0px';
+        overlay.style.display = 'block';
+      }
+    }
+  </script>
+     <h1>
+    <nav>
+    <a href=" https://www.facebook.com/if.aborohn "> Facebook </a>
+        <a href=" https://www.instagram.com/if.aborohn/ "> Instagram </a>
+        <a href=" https://www.tiktok.com/@if.aborohn"> Tik Tok </a>
+   <p> <marquee class="color-blink"> Chào Mừng Đến Website của Bảo Hoan ✌️ </marquee> </p>
+</nav> </h1>
+</header>
+<article>
+    <h1> <center>Trang chủ</center></h1>
+  <p> <b style="font-size: 20px;"> 1.Giới thiệu về bản thân </b></p>
+  <p> <b style="font-size: 17px;"> a, Thông tin bản thân </p> </b>
+  <p> - Họ và tên: Nguyễn Bảo Hoan</p> 
+  <p> - Ngày sinh: 08/07/2007</p>
+  <p> - Giới tính: Nam </p>
+  <p> - Học tại: Trường đại học Sư Phạm Thành phố Hồ Chí Minh </p>
+  <iframe src="https://hcmue.edu.vn/vi/" width="1500" height="600" frameborder="0" allowfullscreen></iframe>
+</article>
+
+ 
+<footer>Bảo Hoan &copy; K51</footer>
+ 
+</div>
+ <embed src="Gorillaz - On Melancholy Hill (lyrics) - wonderwall.mp3" autostart="true" hidden="false" loop="false">
+</body>
+</html>
